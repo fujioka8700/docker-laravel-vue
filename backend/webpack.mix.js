@@ -13,4 +13,15 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .vue()
-    .sass('resources/sass/app.scss', 'public/css');
+    .sass('resources/sass/app.scss', 'public/css')
+    .browserSync({
+        proxy: {
+            target: "http://127.0.0.1"
+        },
+        files: [
+            './resources/**/*',
+            './public/**/*'
+        ],
+        open: false,
+        reloadOnRestart: true
+    });
