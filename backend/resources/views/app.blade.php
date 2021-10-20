@@ -3,12 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     {{-- CSRF Token --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>{{ config('app.name', 'Vue Laravel SPA') }}</title>
+
+    {{-- Styles --}}
+    <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+
+    {{-- Scripts --}}
+    <script src="{{ mix('/js/app.js') }}" defer></script>
 </head>
 <body>
-    <p>hello</p>
+    <div id="app">
+        <header-component></header-component>
+        <router-view></router-view>
+    </div>
 </body>
 </html>
