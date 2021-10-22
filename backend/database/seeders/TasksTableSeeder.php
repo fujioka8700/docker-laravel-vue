@@ -18,7 +18,7 @@ class TasksTableSeeder extends Seeder
             Task::create([
                 'title' => 'title' . $i,
                 'content' => 'content' . $i,
-                'person-in-charge' => 'person-in-charge' . $i,
+                'person_in_charge' => 'person_in_charge' . $i,
             ]);
         }
     }
