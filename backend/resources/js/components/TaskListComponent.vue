@@ -19,7 +19,7 @@
                     <td>{{ task.content }}</td>
                     <td>{{ task.person_in_charge }}</td>
                     <td>
-                        <router-link v-bind:to="{name: 'task.show', params: {taskId: task.id}}">
+                        <router-link v-bind:to="{name: 'task.show', params: {taskId: task.id.toString()}}">
                             <button class="btn btn-primary">Show</button>
                         </router-link>
                     </td>
